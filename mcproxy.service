@@ -1,0 +1,18 @@
+[Unit]
+Description=Minecraft TCP proxy
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=/opt/mcproxy/mcproxy
+Restart=always
+RestartSec=1
+LimitNOFILE=65536
+DynamicUser=yes
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
