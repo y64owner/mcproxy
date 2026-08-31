@@ -2,6 +2,7 @@
 Description=Minecraft TCP proxy
 After=network-online.target
 Wants=network-online.target
+StartLimitIntervalSec=0
 
 [Service]
 ExecStart=/opt/mcproxy/mcproxy
