@@ -11,9 +11,9 @@ use tokio::net::{TcpListener, TcpStream};
 use tokio::time::interval;
 
 const LISTEN_ADDR: &str = "0.0.0.0:25565";
-const ORIGIN_ADDR: &str = "152.53.95.120:25565";
-const MAX_CONNS_PER_IP: usize = 8;
-const RATE_LIMIT_MAX: usize = 15;
+const ORIGIN_ADDR: &str = "127.0.0.1:25565";
+const MAX_CONNS_PER_IP: usize = 20;
+const RATE_LIMIT_MAX: usize = 40;
 const RATE_LIMIT_WINDOW: Duration = Duration::from_secs(10);
 const FIRST_BYTE_TIMEOUT: Duration = Duration::from_secs(5);
 const CONNECT_TIMEOUT: Duration = Duration::from_secs(5);
